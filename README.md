@@ -324,16 +324,38 @@ The agent (`agent/agent.py`) knows how to:
 
 ### Modify Agent Behavior
 
-Edit `agent/agent.py`:
+Edit `agent/agent.py` to customize the financial coordinator:
 
 ```python
-search_agent = LlmAgent(
-    name="search_assistant",
-    model="gemini-2.0-flash",
-    instruction="Your custom instructions...",
-    tools=[google_search_tool],
+financial_coordinator = LlmAgent(
+    name="financial_coordinator",
+    model=MODEL,  # Gemini 2.5 Flash (see config.py)
+    description=(
+        "guide users through a structured process to receive financial "
+        "advice by orchestrating a series of expert subagents. help them "
+        "analyze a market ticker, develop trading strategies, define "
+        "execution plans, and evaluate the overall risk."
+    ),
+    instruction=prompt.FINANCIAL_COORDINATOR_PROMPT,
+    output_key="financial_coordinator_output",
+    tools=[
+        google_search,  # For general questions
+        AgentTool(agent=data_analyst_agent),
+        AgentTool(agent=trading_analyst_agent),
+        AgentTool(agent=execution_analyst_agent),
+        AgentTool(agent=risk_analyst_agent),
+    ],
 )
 ```
+
+**Multi-Agent Architecture:**
+- **Financial Coordinator**: Main agent that orchestrates the workflow
+- **Data Analyst**: Analyzes market data and ticker information (uses yfinance)
+- **Trading Analyst**: Develops trading strategies based on data analysis
+- **Execution Analyst**: Creates execution plans for trading strategies
+- **Risk Analyst**: Evaluates risk factors and provides risk assessment
+
+Each sub-agent is located in `agent/sub_agents/` with its own specialized prompt and tools.
 
 ### Customize UI
 

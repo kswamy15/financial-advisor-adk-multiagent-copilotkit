@@ -153,8 +153,9 @@ async def handle_request(input_data: RunAgentInput, request: Request):
 async def health_check():
     return {
         "status": "healthy",
-        "agent": "google_search_assistant",
-        "tools": ["google_search"],
+        "agent": "financial_coordinator",
+        "sub_agents": ["data_analyst", "trading_analyst", "execution_analyst", "risk_analyst"],
+        "tools": ["google_search", "yfinance"],
         "active_sessions": len(session_manager.sessions)
     }
 
