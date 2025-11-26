@@ -123,6 +123,8 @@ The financial advisor uses a **coordinated multi-agent architecture** to provide
 - Fetches real-time market data using yfinance
 - Analyzes stock prices, volumes, and historical trends
 - Provides fundamental data like P/E ratios, market cap, dividends
+- **Creates interactive visualizations**: Charts (pie, bar, line, area) and data tables
+- Formats data in structured JSON for automatic rendering in the UI
 
 **💹 Trading Analyst Agent**
 - Develops trading strategies based on data analysis
