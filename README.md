@@ -110,6 +110,43 @@ npm run dev:frontend
 2. Click "Sign In" or create an account (mock authentication)
 3. Start chatting with the AI assistant
 
+### Understanding the Multi-Agent System
+
+The financial advisor uses a **coordinated multi-agent architecture** to provide comprehensive financial analysis:
+
+**🎯 Financial Coordinator** (Main Agent)
+- Orchestrates the entire workflow and coordinates between specialized sub-agents
+- Determines which agents to call based on your questions
+- Synthesizes insights from all sub-agents into coherent advice
+
+**📊 Data Analyst Agent**
+- Fetches real-time market data using yfinance
+- Analyzes stock prices, volumes, and historical trends
+- Provides fundamental data like P/E ratios, market cap, dividends
+
+**💹 Trading Analyst Agent**
+- Develops trading strategies based on data analysis
+- Suggests entry/exit points and position sizing
+- Considers technical indicators and market conditions
+
+**⚙️ Execution Analyst Agent**
+- Creates detailed execution plans for trading strategies
+- Recommends order types (market, limit, stop-loss)
+- Considers timing, liquidity, and transaction costs
+
+**⚠️ Risk Analyst Agent**
+- Evaluates risk factors for proposed strategies
+- Assesses volatility, drawdown potential, and correlation
+- Provides risk-adjusted performance metrics
+
+**How it works:**
+When you ask a question like "Analyze AAPL stock", the Financial Coordinator:
+1. Calls the **Data Analyst** to fetch current AAPL data
+2. Calls the **Trading Analyst** to suggest strategies based on the data
+3. Calls the **Execution Analyst** to create an execution plan
+4. Calls the **Risk Analyst** to evaluate the overall risk
+5. Synthesizes all insights into a comprehensive response
+
 ### Creating Visualizations
 
 **Request Charts:**
