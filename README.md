@@ -117,6 +117,7 @@ The financial advisor uses a **coordinated multi-agent architecture** to provide
 **🎯 Financial Coordinator** (Main Agent)
 - Orchestrates the entire workflow and coordinates between specialized sub-agents
 - Determines which agents to call based on your questions
+- **Accesses Google Search** to answer general questions and provide real-time information
 - Synthesizes insights from all sub-agents into coherent advice
 
 **📊 Data Analyst Agent**
