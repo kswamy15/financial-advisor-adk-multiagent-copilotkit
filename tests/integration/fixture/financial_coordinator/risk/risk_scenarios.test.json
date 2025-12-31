@@ -1,0 +1,47 @@
+{
+    "eval_set_id": "85b55608-dc1e-499c-976e-7969c880d056",
+    "name": "risk_scenarios.test.json",
+    "eval_cases": [
+        {
+            "eval_id": "678dce44-1cb7-4365-b769-21fc5a5da353",
+            "conversation": [
+                {
+                    "invocation_id": "be28e0f9-af80-4ecd-85d8-608b4b5335cf",
+                    "user_content": {
+                        "role": "user",
+                        "parts": [
+                            {
+                                "text": "I want to analyze TSLA with an aggressive risk profile for short-term trading"
+                            }
+                        ]
+                    },
+                    "final_response": {
+                        "role": "model",
+                        "parts": [
+                            {
+                                "text": "I've analyzed TSLA and developed aggressive short-term trading strategies. The strategies reflect your high-risk tolerance and short time horizon."
+                            }
+                        ]
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "data_analyst_agent",
+                                "args": {}
+                            },
+                            {
+                                "name": "trading_analyst_agent",
+                                "args": {}
+                            }
+                        ],
+                        "tool_responses": [],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1766902293.99592
+                }
+            ],
+            "creation_timestamp": 1766902293.9959319
+        }
+    ],
+    "creation_timestamp": 1766902293.9959319
+}

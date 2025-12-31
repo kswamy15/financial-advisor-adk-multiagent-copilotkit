@@ -1,0 +1,38 @@
+{
+    "eval_set_id": "26464465-b402-4223-96ea-47fe2601620a",
+    "name": "investment_strategy.test.json",
+    "eval_cases": [
+        {
+            "eval_id": "affd6a9f-394b-4eca-ada9-4285cb5ffe13",
+            "conversation": [
+                {
+                    "invocation_id": "054113de-9cb8-4c52-ba33-cf5065bc3fd2",
+                    "user_content": {
+                        "role": "user",
+                        "parts": [
+                            {
+                                "text": "I have $50,000 to invest in renewable energy. What is a medium-risk strategy?"
+                            }
+                        ]
+                    },
+                    "final_response": {
+                        "role": "model",
+                        "parts": [
+                            {
+                                "text": "A medium-risk strategy for renewable energy typically involves a mix of established utility companies with renewable portfolios (yieldcos) and broader ETFs, rather than betting on single volatile stocks."
+                            }
+                        ]
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [],
+                        "tool_responses": [],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1766902293.9953291
+                }
+            ],
+            "creation_timestamp": 1766902293.995344
+        }
+    ],
+    "creation_timestamp": 1766902293.9953449
+}

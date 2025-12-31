@@ -1,0 +1,43 @@
+{
+    "eval_set_id": "ec3ac656-9019-47db-9e59-d3a99e3f732a",
+    "name": "google_search.test.json",
+    "eval_cases": [
+        {
+            "eval_id": "a6dbc441-e5cf-4bed-88d1-9d9a3eabff3d",
+            "conversation": [
+                {
+                    "invocation_id": "9d91bd46-790b-44d9-8b87-aa02bab68873",
+                    "user_content": {
+                        "role": "user",
+                        "parts": [
+                            {
+                                "text": "What are the latest developments in quantum computing?"
+                            }
+                        ]
+                    },
+                    "final_response": {
+                        "role": "model",
+                        "parts": [
+                            {
+                                "text": "Based on recent developments, quantum computing has made significant progress in areas such as error correction, qubit stability, and practical applications."
+                            }
+                        ]
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "google_search",
+                                "args": {}
+                            }
+                        ],
+                        "tool_responses": [],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1766902293.995617
+                }
+            ],
+            "creation_timestamp": 1766902293.99563
+        }
+    ],
+    "creation_timestamp": 1766902293.9956312
+}

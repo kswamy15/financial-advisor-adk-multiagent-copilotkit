@@ -15,7 +15,8 @@
 """data_analyst_agent for finding information using google search"""
 
 from google.adk import Agent
-from google.adk.tools import google_search, FunctionTool
+from google.adk.tools import FunctionTool
+from google.adk.tools.google_search_tool import GoogleSearchTool
 
 from config import MODEL
 from . import prompt
@@ -33,7 +34,7 @@ data_analyst_agent = Agent(
     instruction=prompt.DATA_ANALYST_PROMPT,
     output_key="market_data_analysis_output",
     tools=[
-        google_search,
+        GoogleSearchTool(bypass_multi_tools_limit=True),
         FunctionTool(get_stock_price),
         FunctionTool(get_historical_data),
         FunctionTool(get_financial_info),

@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "rubric_based_final_response_quality_v1": {
+            "threshold": 0.5,
+            "judge_model_options": {
+                "judge_model": "gemini-2.5-flash",
+                "num_samples": 1
+            },
+            "rubrics": [
+                {
+                    "rubric_id": "risk_alignment",
+                    "rubric_content": {
+                        "text_property": "The response provides strategies that align with an aggressive risk profile and short-term period as specified in the query."
+                    }
+                },
+                {
+                    "rubric_id": "safe_disclaimer",
+                    "rubric_content": {
+                        "text_property": "Even with aggressive strategies, the response includes required safety disclaimers."
+                    }
+                }
+            ]
+        }
+    }
+}

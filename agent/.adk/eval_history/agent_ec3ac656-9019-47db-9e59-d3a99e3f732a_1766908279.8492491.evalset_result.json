@@ -1,0 +1,618 @@
+{
+    "eval_set_result_id": "agent_ec3ac656-9019-47db-9e59-d3a99e3f732a_1766908279.8492491",
+    "eval_set_result_name": "agent_ec3ac656-9019-47db-9e59-d3a99e3f732a_1766908279.8492491",
+    "eval_set_id": "ec3ac656-9019-47db-9e59-d3a99e3f732a",
+    "eval_case_results": [
+        {
+            "eval_set_file": "ec3ac656-9019-47db-9e59-d3a99e3f732a",
+            "eval_set_id": "ec3ac656-9019-47db-9e59-d3a99e3f732a",
+            "eval_id": "a6dbc441-e5cf-4bed-88d1-9d9a3eabff3d",
+            "final_eval_status": 1,
+            "eval_metric_results": null,
+            "overall_eval_metric_results": [
+                {
+                    "metric_name": "rubric_based_final_response_quality_v1",
+                    "threshold": 0.7,
+                    "judge_model_options": null,
+                    "criterion": {
+                        "threshold": 0.7,
+                        "judge_model_options": {
+                            "judge_model": "gemini-2.5-flash",
+                            "num_samples": 1
+                        },
+                        "rubrics": [
+                            {
+                                "rubric_id": "search_accuracy",
+                                "rubric_content": {
+                                    "text_property": "The response contains accurate information based on the external information provided by the search tool."
+                                }
+                            },
+                            {
+                                "rubric_id": "source_citation",
+                                "rubric_content": {
+                                    "text_property": "The response mentions using outside information or cites relevant details from the search results."
+                                }
+                            }
+                        ]
+                    },
+                    "score": 1.0,
+                    "eval_status": 1,
+                    "details": {
+                        "rubric_scores": [
+                            {
+                                "rubric_id": "search_accuracy",
+                                "rationale": "This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.",
+                                "score": 1.0
+                            },
+                            {
+                                "rubric_id": "source_citation",
+                                "rationale": "This is an aggregated score derived from individual entries. Please refer to individual entries in each invocation for actual rationale from the model.",
+                                "score": 1.0
+                            }
+                        ]
+                    }
+                }
+            ],
+            "eval_metric_result_per_invocation": [
+                {
+                    "actual_invocation": {
+                        "invocation_id": "e-e96920ea-d1ab-4d30-aea5-0623b3ff1bb8",
+                        "user_content": {
+                            "parts": [
+                                {
+                                    "video_metadata": null,
+                                    "thought": null,
+                                    "inline_data": null,
+                                    "file_data": null,
+                                    "thought_signature": null,
+                                    "function_call": null,
+                                    "code_execution_result": null,
+                                    "executable_code": null,
+                                    "function_response": null,
+                                    "text": "What are the latest developments in quantum computing?"
+                                }
+                            ],
+                            "role": "user"
+                        },
+                        "final_response": {
+                            "parts": [
+                                {
+                                    "video_metadata": null,
+                                    "thought": null,
+                                    "inline_data": null,
+                                    "file_data": null,
+                                    "thought_signature": null,
+                                    "function_call": null,
+                                    "code_execution_result": null,
+                                    "executable_code": null,
+                                    "function_response": null,
+                                    "text": "Here's a summary of the latest developments in quantum computing, based on a Google search:\n\nQuantum computing has seen significant advancements in 2024 and 2025, marked by increased investment, hardware breakthroughs, and growing commercial applications.\n\n**Key Developments:**\n\n*   **Surge in Investment:** There has been a substantial increase in funding for quantum computing companies, with billions invested in equity funding and significant public funding commitments from various governments.\n*   **Hardware Innovation and Qubit Scaling:**\n    *   **Increased Qubit Counts:** Researchers have announced record-breaking qubit arrays, with IBM and Google surpassing the 1,000-qubit barrier in superconducting qubits.\n    *   **New Chip Architectures:** Companies like Microsoft, Amazon, and Google have introduced new quantum chips with different architectures.\n    *   **Logical Qubits and Error Correction:** There's a growing focus on logical qubits and error correction, with demonstrations of quantum memory with low error rates and entanglement of logical qubits. China has achieved quantum error correction below the fault-tolerance threshold.\n*   **Demonstrations of Quantum Advantage and Commercial Applications:**\n    *   Some companies, like IonQ and Google, have claimed quantum advantage in specific applications, with Google reporting its quantum computer being significantly faster than classical supercomputers in certain tests.\n    *   D-Wave also claimed quantum computational supremacy in a real-world problem, though this has been met with some debate.\n    *   The financial industry, supply chain optimization, battery development, materials science, cryptography, and AI are expected to be early adopters of quantum computing.\n*   **Emerging Trends:**\n    *   **Quantum-Classical Hybrids:** Combining quantum and classical computers to enhance computational power.\n    *   **Networking NISQ Devices:** Connecting smaller quantum computers to scale systems.\n    *   **Post-Quantum Cryptography:** The urgent need for quantum-resistant algorithms to secure digital infrastructure, with governments accelerating deployment plans.\n    *   **Quantum AI Synergy:** Leveraging quantum computing for optimization, generative AI for quantum problem-solving, and AI-driven error correction.\n\nIn essence, quantum computing is rapidly moving from a purely research-focused area to one with increasing commercial relevance and strategic importance, attracting substantial investment and making tangible progress towards fault-tolerant and commercially viable systems."
+                                }
+                            ],
+                            "role": "model"
+                        },
+                        "intermediate_data": {
+                            "invocation_events": [
+                                {
+                                    "author": "financial_coordinator",
+                                    "content": {
+                                        "parts": [
+                                            {
+                                                "video_metadata": null,
+                                                "thought": null,
+                                                "inline_data": null,
+                                                "file_data": null,
+                                                "thought_signature": "CqUDAXLI2nzDFBfLQd0pj44XZCsyKVIcNhhtw3uRDV_s2iO8wlosy_FWkMoFzRel6xB_v0U1jd61ZsO4mPisyCAgfjNXH3sRGpI-puSkBaLwnTK_SElwrVjS6PLmrfm9kYEekA0Rc5SzGm46atfTL04Nlbz0bxW-pUVrI0itlUQqiDQRRRPRrdNVhQS3HGE8oydgTLMwPOLJ36QtrlTJqItpd12-xkA_kuf39ThGDnTHix2B2IU5PfnDmD9TMKkKLNbs-1MJL2PtGeYVs9EDsP3-OW06U2JG8Qhws5jCBNYSnulMkGNrqssdh_i6bZ-PqI48jd0w-mTzCrrNBqMe3Wqf4hOteTWLuW23YZlSZIwlrWQjOnKnSMcIIRKBX1D614rUit1gHNrpSwB7ecQwUHehOk6s511jFwG71aUfvKHIiiUDgGKc3N9fG7_MnFeOH_oh7ibNVtKFhQuCR7ciuaxkh-xHxMxSCA2SqKiwRn6oP6OUm6cWanP4ozwuGVRD_BSj7b8Ay4f3NLmZcBDQMjQVb2blMMkuCpuseYEFGIDlCu2xMpSRJg==",
+                                                "function_call": null,
+                                                "code_execution_result": null,
+                                                "executable_code": null,
+                                                "function_response": null,
+                                                "text": "Hello! \ud83d\udc4b I'm your Financial Advisory Assistant.\n\n**I can help you with:**\n1. **Stock Analysis & Financial Advice** - Provide detailed analysis, trading strategies, execution plans, and risk assessment for any stock ticker\n2. **General Information** - Answer questions about any topic using Google search\n\n**For Financial Advice:**\nSimply provide a stock ticker (e.g., 'AAPL', 'MSFT', 'GOOGL') or ask about trading strategies, and I'll guide you through a comprehensive financial analysis process including market data, trading strategies, execution plans, and risk assessment.\n\n**For General Questions:**\nAsk me anything - current events, factual information, how-to guides, or any topic you're curious about!\n\nRemember: At each step of financial analysis, you can ask to 'show me the detailed result as markdown'.\n\nWhat would you like to know?\nImportant Disclaimer: For Educational and Informational Purposes Only. \nThe information and trading strategy outlines provided by this tool, including any analysis, \ncommentary, or potential scenarios, are generated by an AI model and are for educational and informational purposes only. \nThey do not constitute, and should not be interpreted as, financial advice, investment recommendations, endorsements, \nor offers to buy or sell any securities or other financial instruments. \nWe make no representations or warranties of any kind, express or implied, about the completeness, \naccuracy, reliability, suitability, or availability with respect to the information provided. Any reliance you place \non such information is therefore strictly at your own risk. \nThis is not an offer to buy or sell any security. \nInvestment decisions should not be made based solely on the information provided here. \nFinancial markets are subject to risks, and past performance is not indicative of future results. \nYou should conduct your own thorough research and consult with a qualified independent financial advisor before making any investment decisions.\nBy using this tool and reviewing these strategies, you acknowledge that you understand this disclaimer and agree that \nwe are not liable for any losses or damages arising from your use of or reliance on this information.\n"
+                                            },
+                                            {
+                                                "video_metadata": null,
+                                                "thought": null,
+                                                "inline_data": null,
+                                                "file_data": null,
+                                                "thought_signature": null,
+                                                "function_call": {
+                                                    "id": "adk-7c67c9f8-7592-471d-b938-ed904fba10b9",
+                                                    "args": {
+                                                        "request": "latest developments in quantum computing"
+                                                    },
+                                                    "name": "google_search_agent"
+                                                },
+                                                "code_execution_result": null,
+                                                "executable_code": null,
+                                                "function_response": null,
+                                                "text": null
+                                            }
+                                        ],
+                                        "role": "model"
+                                    }
+                                },
+                                {
+                                    "author": "financial_coordinator",
+                                    "content": {
+                                        "parts": [
+                                            {
+                                                "video_metadata": null,
+                                                "thought": null,
+                                                "inline_data": null,
+                                                "file_data": null,
+                                                "thought_signature": null,
+                                                "function_call": null,
+                                                "code_execution_result": null,
+                                                "executable_code": null,
+                                                "function_response": {
+                                                    "will_continue": null,
+                                                    "scheduling": null,
+                                                    "parts": null,
+                                                    "id": "adk-7c67c9f8-7592-471d-b938-ed904fba10b9",
+                                                    "name": "google_search_agent",
+                                                    "response": {
+                                                        "result": "Quantum computing has seen rapid advancements in 2024 and 2025, marked by substantial investments, significant hardware breakthroughs, and increasing demonstrations of practical applications. The industry is transitioning from a purely research-focused endeavor to one with growing commercial relevance and strategic importance.\n\n**Key Developments and Breakthroughs:**\n\n*   **Surge in Investment:** The first quarter of 2025 alone saw over $1.25 billion invested in quantum computing companies, more than double the figure from Q1 2024 and accounting for over 70% of all quantum-related funding. Total equity funding for quantum computing companies reached $3.77 billion in the first nine months of 2025, nearly tripling the $1.3 billion raised in all of 2024. Governments worldwide are also significantly increasing their commitments, with public funding reaching $10 billion by April 2025, including major pledges from Japan ($7.4 billion) and Spain (\u20ac808 million).\n*   **Hardware Innovation and Qubit Scaling:**\n    *   **Increased Qubit Counts:** Caltech researchers announced a record-breaking 6,100-qubit array in September 2025, trapping cesium atoms that maintained superposition for 13 seconds. IBM unveiled its Condor processor with 1,121 superconducting qubits in 2024, surpassing the 1,000-qubit barrier. Fujitsu and RIKEN plan for a 1,000-qubit machine by 2026.\n    *   **New Chip Architectures:** Microsoft introduced its Majorana 1 chip in February 2025, and Amazon unveiled its Ocelot chip. Google announced its 105-superconducting-transmon-qubit Willow processor in December 2024, fabricated in its new Santa Barbara facility. Silicon Quantum Computing developed a new silicon-based architecture (\"14/15\") achieving 99.5% to 99.99% fidelity in a quantum computer with nine nuclear and two atomic qubits.\n    *   **Logical Qubits and Error Correction:** A significant shift is occurring towards logical qubits, which are protected from errors. In 2024, Google demonstrated quantum memory with below-threshold error rates, and Microsoft and Quantinuum entangled 12 logical qubits, achieving a logical error rate of 0.0011. China's \"Zuchongzhi 3.2\" prototype achieved quantum error correction below the fault-tolerance threshold on a surface code with a code distance of seven, demonstrating a decrease in logical error rates as code distance increases.\n*   **Demonstrations of Quantum Advantage and Commercial Applications:**\n    *   IonQ claimed quantum advantage in drug discovery, engineering applications, and chemistry simulations in October 2025.\n    *   Google reported in October 2025 that its quantum computer was 13,000 times faster than the world's fastest classical supercomputer in a verifiable test.\n    *   D-Wave announced in March 2025 a demonstration of quantum computational supremacy on a real-world problem, outperforming a classical supercomputer in a magnetic materials simulation. However, this claim was met with challenges from researchers asserting similar results could be achieved classically.\n    *   Quantinuum launched its Helios quantum computer in November 2025, claiming it to be the most accurate commercial system available and capable of commercially relevant research.\n    *   The financial industry is expected to be an early adopter of quantum computing, with applications in supply chain optimization, battery development, materials science, cryptography, and AI also showing significant potential.\n*   **Emerging Trends:**\n    *   **Quantum-Classical Hybrids:** There's a growing trend of combining quantum computers with classical ones to enhance computational power.\n    *   **Networking NISQ Devices:** Companies like Photonic and QuTech have demonstrated distributed entanglement and connected small quantum computers in different cities, pointing towards scaling quantum systems by interconnecting multiple processors.\n    *   **Post-Quantum Cryptography:** The need for quantum-resistant algorithms is becoming an enterprise priority, with governments and corporations accelerating deployment plans to safeguard digital infrastructure. The US National Institute of Standards and Technology (NIST) published a report in November 2024 on the required transition to post-quantum cryptography.\n    *   **Quantum AI Synergy:** Expect to see hybrid models leveraging quantum computing for optimization, generative AI for quantum problem-solving, and AI-driven error correction.\n\nOverall, the period of 2024-2025 has cemented quantum computing's position as a critical, rapidly evolving field, attracting substantial investment and making concrete progress toward fault-tolerant, commercially viable quantum systems."
+                                                    }
+                                                },
+                                                "text": null
+                                            }
+                                        ],
+                                        "role": "user"
+                                    }
+                                }
+                            ]
+                        },
+                        "creation_timestamp": 1766908259.887113,
+                        "rubrics": null,
+                        "app_details": {
+                            "agent_details": {
+                                "financial_coordinator": {
+                                    "name": "financial_coordinator",
+                                    "instructions": "\nRole: You are a specialized Financial Advisory Assistant with Google search capabilities.\n\nPrimary Capabilities:\n1. **Financial Analysis** - Provide comprehensive financial advice for stock tickers through expert subagents\n2. **General Information Search** - Answer non-financial questions using Google search\n\nHow to Determine User Intent:\n- If the user mentions a stock ticker (e.g., \"AAPL\", \"GOOGL\", \"MSFT\"), provides a company name for analysis, or asks about trading strategies/financial advice \u2192 Use Financial Analysis workflow\n- If the user asks general questions, current events, factual inquiries not specifically about stock analysis \u2192 Use Google Search\n\nOverall Instructions for Interaction:\n\nAt the beginning, introduce yourself to the user:\n\n\"Hello! \ud83d\udc4b I'm your Financial Advisory Assistant.\n\n**I can help you with:**\n1. **Stock Analysis & Financial Advice** - Provide detailed analysis, trading strategies, execution plans, and risk assessment for any stock ticker\n2. **General Information** - Answer questions about any topic using Google search\n\n**For Financial Advice:**\nSimply provide a stock ticker (e.g., 'AAPL', 'MSFT', 'GOOGL') or ask about trading strategies, and I'll guide you through a comprehensive financial analysis process including market data, trading strategies, execution plans, and risk assessment.\n\n**For General Questions:**\nAsk me anything - current events, factual information, how-to guides, or any topic you're curious about!\n\nRemember: At each step of financial analysis, you can ask to 'show me the detailed result as markdown'.\n\nWhat would you like to know?\"\n\nThen immediately show this disclaimer:\n\n\"Important Disclaimer: For Educational and Informational Purposes Only. \nThe information and trading strategy outlines provided by this tool, including any analysis, \ncommentary, or potential scenarios, are generated by an AI model and are for educational and informational purposes only. \nThey do not constitute, and should not be interpreted as, financial advice, investment recommendations, endorsements, \nor offers to buy or sell any securities or other financial instruments. \nWe make no representations or warranties of any kind, express or implied, about the completeness, \naccuracy, reliability, suitability, or availability with respect to the information provided. Any reliance you place \non such information is therefore strictly at your own risk. \nThis is not an offer to buy or sell any security. \nInvestment decisions should not be made based solely on the information provided here. \nFinancial markets are subject to risks, and past performance is not indicative of future results. \nYou should conduct your own thorough research and consult with a qualified independent financial advisor before making any investment decisions.\nBy using this tool and reviewing these strategies, you acknowledge that you understand this disclaimer and agree that \nwe are not liable for any losses or damages arising from your use of or reliance on this information.\"\n\n\nAt each step, clearly inform the user about the current subagent being called and the specific information required from them.\nAfter each subagent completes its task, explain the output provided and how it contributes to the overall financial advisory process.\nEnsure all state keys are correctly used to pass information between subagents.\nHere's the step-by-step breakdown.\nFor each step, explicitly call the designated subagent and adhere strictly to the specified input and output formats:\n\n* Gather Market Data Analysis (Subagent: data_analyst)\n\nInput: Prompt the user to provide the market ticker symbol they wish to analyze (e.g., AAPL, GOOGL, MSFT).\nAction: Call the data_analyst subagent, passing the user-provided market ticker.\nExpected Output: The data_analyst subagent MUST return a comprehensive data analysis for the specified market ticker.\nShow the comprehensive data analysis as markdown.\n\n* Develop Trading Strategies (Subagent: trading_analyst)\n\nInput:\nPrompt the user to define their risk attitude (e.g., conservative, moderate, aggressive).\nPrompt the user to specify their investment period (e.g., short-term, medium-term, long-term).\nAction: Call the trading_analyst subagent, providing:\nThe market_data_analysis_output (from state key).\nThe user-selected risk attitude.\nThe user-selected investment period.\nExpected Output: The trading_analyst subagent MUST generate one or more potential trading strategies tailored to the provided market analysis,\nrisk attitude, and investment period.\nShow the generated extended version by visualizing the results as markdown\n\n* Define Optimal Execution Strategy (Subagent: execution_analyst)\n\nInput:\nThe proposed_trading_strategies_output (from state key).\nThe user's risk attitude (previously provided).\nThe user's investment period (previously provided).\nYou may also need to ask the user if they have preferences for execution, such as preferred brokers or order types,\nif the subagent can utilize this information.\nAction: Call the execution_analyst subagent, providing:\nThe proposed_trading_strategies_output (from state key)..\nThe user's risk attitude.\nThe user's investment period.\n(Optional: User's execution preferences).\nExpected Output: The execution_analyst subagent MUST generate a detailed execution plan for the selected trading strategy (or strategies).\nThis plan should consider factors like order types, timing, and potential cost implications,\naligned with the user's risk profile and the market_data_analysis.\nShow the generated extended version by visualizing the results as markdown\n\n* Evaluate Overall Risk Profile (Subagent: risk_analyst)\n\nInput:\nThe market_data_analysis_output (from state key).\nThe proposed_trading_strategies_output (from state key).\nThe execution_plan_output (from state key).\nThe user's stated risk attitude.\nThe user's stated investment period.\nAction: Call the risk_analyst subagent, providing all the listed inputs.\nExpected Output: The risk_analyst subagent MUST provide a comprehensive evaluation of the overall risk associated with the proposed financial plan\n(data, strategies, and execution). This evaluation should highlight consistency with the user's stated risk attitude and investment horizon,\nand point out any potential misalignments or concentrated risks.\nShow the generated extended version by visualizing the results as markdown\n\n\nYou are an agent. Your internal name is \"financial_coordinator\". The description about you is \"Specialized Financial Advisory Assistant that orchestrates expert subagents to provide market analysis, trading strategies, and risk assessments.\".",
+                                    "tool_declarations": [
+                                        {
+                                            "function_declarations": [
+                                                {
+                                                    "behavior": null,
+                                                    "description": "An agent for performing Google search using the `google_search` tool",
+                                                    "name": "google_search_agent",
+                                                    "parameters": {
+                                                        "additional_properties": null,
+                                                        "defs": null,
+                                                        "ref": null,
+                                                        "any_of": null,
+                                                        "default": null,
+                                                        "description": null,
+                                                        "enum": null,
+                                                        "example": null,
+                                                        "format": null,
+                                                        "items": null,
+                                                        "max_items": null,
+                                                        "max_length": null,
+                                                        "max_properties": null,
+                                                        "maximum": null,
+                                                        "min_items": null,
+                                                        "min_length": null,
+                                                        "min_properties": null,
+                                                        "minimum": null,
+                                                        "nullable": null,
+                                                        "pattern": null,
+                                                        "properties": {
+                                                            "request": {
+                                                                "additional_properties": null,
+                                                                "defs": null,
+                                                                "ref": null,
+                                                                "any_of": null,
+                                                                "default": null,
+                                                                "description": null,
+                                                                "enum": null,
+                                                                "example": null,
+                                                                "format": null,
+                                                                "items": null,
+                                                                "max_items": null,
+                                                                "max_length": null,
+                                                                "max_properties": null,
+                                                                "maximum": null,
+                                                                "min_items": null,
+                                                                "min_length": null,
+                                                                "min_properties": null,
+                                                                "minimum": null,
+                                                                "nullable": null,
+                                                                "pattern": null,
+                                                                "properties": null,
+                                                                "property_ordering": null,
+                                                                "required": null,
+                                                                "title": null,
+                                                                "type": "STRING"
+                                                            }
+                                                        },
+                                                        "property_ordering": null,
+                                                        "required": [
+                                                            "request"
+                                                        ],
+                                                        "title": null,
+                                                        "type": "OBJECT"
+                                                    },
+                                                    "parameters_json_schema": null,
+                                                    "response": null,
+                                                    "response_json_schema": null
+                                                },
+                                                {
+                                                    "behavior": null,
+                                                    "description": "",
+                                                    "name": "data_analyst_agent",
+                                                    "parameters": {
+                                                        "additional_properties": null,
+                                                        "defs": null,
+                                                        "ref": null,
+                                                        "any_of": null,
+                                                        "default": null,
+                                                        "description": null,
+                                                        "enum": null,
+                                                        "example": null,
+                                                        "format": null,
+                                                        "items": null,
+                                                        "max_items": null,
+                                                        "max_length": null,
+                                                        "max_properties": null,
+                                                        "maximum": null,
+                                                        "min_items": null,
+                                                        "min_length": null,
+                                                        "min_properties": null,
+                                                        "minimum": null,
+                                                        "nullable": null,
+                                                        "pattern": null,
+                                                        "properties": {
+                                                            "request": {
+                                                                "additional_properties": null,
+                                                                "defs": null,
+                                                                "ref": null,
+                                                                "any_of": null,
+                                                                "default": null,
+                                                                "description": null,
+                                                                "enum": null,
+                                                                "example": null,
+                                                                "format": null,
+                                                                "items": null,
+                                                                "max_items": null,
+                                                                "max_length": null,
+                                                                "max_properties": null,
+                                                                "maximum": null,
+                                                                "min_items": null,
+                                                                "min_length": null,
+                                                                "min_properties": null,
+                                                                "minimum": null,
+                                                                "nullable": null,
+                                                                "pattern": null,
+                                                                "properties": null,
+                                                                "property_ordering": null,
+                                                                "required": null,
+                                                                "title": null,
+                                                                "type": "STRING"
+                                                            }
+                                                        },
+                                                        "property_ordering": null,
+                                                        "required": [
+                                                            "request"
+                                                        ],
+                                                        "title": null,
+                                                        "type": "OBJECT"
+                                                    },
+                                                    "parameters_json_schema": null,
+                                                    "response": null,
+                                                    "response_json_schema": null
+                                                },
+                                                {
+                                                    "behavior": null,
+                                                    "description": "",
+                                                    "name": "trading_analyst_agent",
+                                                    "parameters": {
+                                                        "additional_properties": null,
+                                                        "defs": null,
+                                                        "ref": null,
+                                                        "any_of": null,
+                                                        "default": null,
+                                                        "description": null,
+                                                        "enum": null,
+                                                        "example": null,
+                                                        "format": null,
+                                                        "items": null,
+                                                        "max_items": null,
+                                                        "max_length": null,
+                                                        "max_properties": null,
+                                                        "maximum": null,
+                                                        "min_items": null,
+                                                        "min_length": null,
+                                                        "min_properties": null,
+                                                        "minimum": null,
+                                                        "nullable": null,
+                                                        "pattern": null,
+                                                        "properties": {
+                                                            "request": {
+                                                                "additional_properties": null,
+                                                                "defs": null,
+                                                                "ref": null,
+                                                                "any_of": null,
+                                                                "default": null,
+                                                                "description": null,
+                                                                "enum": null,
+                                                                "example": null,
+                                                                "format": null,
+                                                                "items": null,
+                                                                "max_items": null,
+                                                                "max_length": null,
+                                                                "max_properties": null,
+                                                                "maximum": null,
+                                                                "min_items": null,
+                                                                "min_length": null,
+                                                                "min_properties": null,
+                                                                "minimum": null,
+                                                                "nullable": null,
+                                                                "pattern": null,
+                                                                "properties": null,
+                                                                "property_ordering": null,
+                                                                "required": null,
+                                                                "title": null,
+                                                                "type": "STRING"
+                                                            }
+                                                        },
+                                                        "property_ordering": null,
+                                                        "required": [
+                                                            "request"
+                                                        ],
+                                                        "title": null,
+                                                        "type": "OBJECT"
+                                                    },
+                                                    "parameters_json_schema": null,
+                                                    "response": null,
+                                                    "response_json_schema": null
+                                                },
+                                                {
+                                                    "behavior": null,
+                                                    "description": "",
+                                                    "name": "execution_analyst_agent",
+                                                    "parameters": {
+                                                        "additional_properties": null,
+                                                        "defs": null,
+                                                        "ref": null,
+                                                        "any_of": null,
+                                                        "default": null,
+                                                        "description": null,
+                                                        "enum": null,
+                                                        "example": null,
+                                                        "format": null,
+                                                        "items": null,
+                                                        "max_items": null,
+                                                        "max_length": null,
+                                                        "max_properties": null,
+                                                        "maximum": null,
+                                                        "min_items": null,
+                                                        "min_length": null,
+                                                        "min_properties": null,
+                                                        "minimum": null,
+                                                        "nullable": null,
+                                                        "pattern": null,
+                                                        "properties": {
+                                                            "request": {
+                                                                "additional_properties": null,
+                                                                "defs": null,
+                                                                "ref": null,
+                                                                "any_of": null,
+                                                                "default": null,
+                                                                "description": null,
+                                                                "enum": null,
+                                                                "example": null,
+                                                                "format": null,
+                                                                "items": null,
+                                                                "max_items": null,
+                                                                "max_length": null,
+                                                                "max_properties": null,
+                                                                "maximum": null,
+                                                                "min_items": null,
+                                                                "min_length": null,
+                                                                "min_properties": null,
+                                                                "minimum": null,
+                                                                "nullable": null,
+                                                                "pattern": null,
+                                                                "properties": null,
+                                                                "property_ordering": null,
+                                                                "required": null,
+                                                                "title": null,
+                                                                "type": "STRING"
+                                                            }
+                                                        },
+                                                        "property_ordering": null,
+                                                        "required": [
+                                                            "request"
+                                                        ],
+                                                        "title": null,
+                                                        "type": "OBJECT"
+                                                    },
+                                                    "parameters_json_schema": null,
+                                                    "response": null,
+                                                    "response_json_schema": null
+                                                },
+                                                {
+                                                    "behavior": null,
+                                                    "description": "",
+                                                    "name": "risk_analyst_agent",
+                                                    "parameters": {
+                                                        "additional_properties": null,
+                                                        "defs": null,
+                                                        "ref": null,
+                                                        "any_of": null,
+                                                        "default": null,
+                                                        "description": null,
+                                                        "enum": null,
+                                                        "example": null,
+                                                        "format": null,
+                                                        "items": null,
+                                                        "max_items": null,
+                                                        "max_length": null,
+                                                        "max_properties": null,
+                                                        "maximum": null,
+                                                        "min_items": null,
+                                                        "min_length": null,
+                                                        "min_properties": null,
+                                                        "minimum": null,
+                                                        "nullable": null,
+                                                        "pattern": null,
+                                                        "properties": {
+                                                            "request": {
+                                                                "additional_properties": null,
+                                                                "defs": null,
+                                                                "ref": null,
+                                                                "any_of": null,
+                                                                "default": null,
+                                                                "description": null,
+                                                                "enum": null,
+                                                                "example": null,
+                                                                "format": null,
+                                                                "items": null,
+                                                                "max_items": null,
+                                                                "max_length": null,
+                                                                "max_properties": null,
+                                                                "maximum": null,
+                                                                "min_items": null,
+                                                                "min_length": null,
+                                                                "min_properties": null,
+                                                                "minimum": null,
+                                                                "nullable": null,
+                                                                "pattern": null,
+                                                                "properties": null,
+                                                                "property_ordering": null,
+                                                                "required": null,
+                                                                "title": null,
+                                                                "type": "STRING"
+                                                            }
+                                                        },
+                                                        "property_ordering": null,
+                                                        "required": [
+                                                            "request"
+                                                        ],
+                                                        "title": null,
+                                                        "type": "OBJECT"
+                                                    },
+                                                    "parameters_json_schema": null,
+                                                    "response": null,
+                                                    "response_json_schema": null
+                                                }
+                                            ],
+                                            "retrieval": null,
+                                            "google_search": null,
+                                            "google_search_retrieval": null,
+                                            "enterprise_web_search": null,
+                                            "google_maps": null,
+                                            "url_context": null,
+                                            "computer_use": null,
+                                            "code_execution": null
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "expected_invocation": {
+                        "invocation_id": "9d91bd46-790b-44d9-8b87-aa02bab68873",
+                        "user_content": {
+                            "parts": [
+                                {
+                                    "video_metadata": null,
+                                    "thought": null,
+                                    "inline_data": null,
+                                    "file_data": null,
+                                    "thought_signature": null,
+                                    "function_call": null,
+                                    "code_execution_result": null,
+                                    "executable_code": null,
+                                    "function_response": null,
+                                    "text": "What are the latest developments in quantum computing?"
+                                }
+                            ],
+                            "role": "user"
+                        },
+                        "final_response": {
+                            "parts": [
+                                {
+                                    "video_metadata": null,
+                                    "thought": null,
+                                    "inline_data": null,
+                                    "file_data": null,
+                                    "thought_signature": null,
+                                    "function_call": null,
+                                    "code_execution_result": null,
+                                    "executable_code": null,
+                                    "function_response": null,
+                                    "text": "Based on recent developments, quantum computing has made significant progress in areas such as error correction, qubit stability, and practical applications."
+                                }
+                            ],
+                            "role": "model"
+                        },
+                        "intermediate_data": {
+                            "tool_uses": [
+                                {
+                                    "id": null,
+                                    "args": {},
+                                    "name": "google_search"
+                                }
+                            ],
+                            "tool_responses": [],
+                            "intermediate_responses": []
+                        },
+                        "creation_timestamp": 1766902293.995617,
+                        "rubrics": null,
+                        "app_details": null
+                    },
+                    "eval_metric_results": [
+                        {
+                            "metric_name": "rubric_based_final_response_quality_v1",
+                            "threshold": 0.7,
+                            "judge_model_options": null,
+                            "criterion": {
+                                "threshold": 0.7,
+                                "judge_model_options": {
+                                    "judge_model": "gemini-2.5-flash",
+                                    "num_samples": 1
+                                },
+                                "rubrics": [
+                                    {
+                                        "rubric_id": "search_accuracy",
+                                        "rubric_content": {
+                                            "text_property": "The response contains accurate information based on the external information provided by the search tool."
+                                        }
+                                    },
+                                    {
+                                        "rubric_id": "source_citation",
+                                        "rubric_content": {
+                                            "text_property": "The response mentions using outside information or cites relevant details from the search results."
+                                        }
+                                    }
+                                ]
+                            },
+                            "score": 1.0,
+                            "eval_status": 1,
+                            "details": {
+                                "rubric_scores": [
+                                    {
+                                        "rubric_id": "search_accuracy",
+                                        "rationale": "All claims made in the final answer, such as the surge in investment, increased qubit counts (IBM and Google), new chip architectures (Microsoft, Amazon, Google), focus on logical qubits and error correction (China's achievement), claims of quantum advantage (IonQ, Google, D-Wave), expected early adopters, and emerging trends (quantum-classical hybrids, networking NISQ devices, post-quantum cryptography, quantum AI synergy), are directly and accurately supported by the details provided in the `tool_response`.",
+                                        "score": 1.0
+                                    },
+                                    {
+                                        "rubric_id": "source_citation",
+                                        "rationale": "The final answer clearly indicates that the information provided is \"based on a Google search,\" thereby mentioning the use of outside information.",
+                                        "score": 1.0
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
+            "session_id": "___eval___session___f8f2e701-6ce3-4957-b4e4-3bc4c3f8bcbe",
+            "session_details": null,
+            "user_id": "test_user_id"
+        }
+    ],
+    "creation_timestamp": 1766908279.8492491
+}

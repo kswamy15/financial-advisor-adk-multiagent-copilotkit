@@ -1,0 +1,133 @@
+{
+    "eval_set_id": "6b39b688-f49f-4e4e-8da0-d4d4704db959",
+    "name": "multi_turn_workflow.test.json",
+    "eval_cases": [
+        {
+            "eval_id": "da0c1a72-c2eb-4574-90e9-19e609fd8be3",
+            "conversation": [
+                {
+                    "invocation_id": "c094aa1c-e418-47f1-b218-f24cc4845be4",
+                    "user_content": {
+                        "role": "user",
+                        "parts": [
+                            {
+                                "text": "I want financial advice for AAPL"
+                            }
+                        ]
+                    },
+                    "final_response": {
+                        "role": "model",
+                        "parts": [
+                            {
+                                "text": "I've gathered comprehensive market data analysis for AAPL. To develop a personalized trading strategy, I need to know: 1) What is your risk attitude (conservative, moderate, or aggressive)? 2) What is your investment period (short-term, medium-term, or long-term)?"
+                            }
+                        ]
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "data_analyst_agent",
+                                "args": {}
+                            }
+                        ],
+                        "tool_responses": [],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1766902293.994786
+                },
+                {
+                    "invocation_id": "88723fea-173a-446f-946b-763fa5b5a734",
+                    "user_content": {
+                        "role": "user",
+                        "parts": [
+                            {
+                                "text": "My risk attitude is moderate and I'm looking at a medium-term investment"
+                            }
+                        ]
+                    },
+                    "final_response": {
+                        "role": "model",
+                        "parts": [
+                            {
+                                "text": "Based on the market analysis and your moderate risk profile with a medium-term horizon, I've developed trading strategies for AAPL. Would you like to proceed with defining an execution plan?"
+                            }
+                        ]
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "trading_analyst_agent",
+                                "args": {}
+                            }
+                        ],
+                        "tool_responses": [],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1766902293.9948
+                },
+                {
+                    "invocation_id": "43ba6033-a656-438a-ad7a-891028cb3f59",
+                    "user_content": {
+                        "role": "user",
+                        "parts": [
+                            {
+                                "text": "Yes, please create an execution plan"
+                            }
+                        ]
+                    },
+                    "final_response": {
+                        "role": "model",
+                        "parts": [
+                            {
+                                "text": "I've created a detailed execution plan for your AAPL investment strategy. Would you like me to perform a comprehensive risk assessment of this entire plan?"
+                            }
+                        ]
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "execution_analyst_agent",
+                                "args": {}
+                            }
+                        ],
+                        "tool_responses": [],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1766902293.9948092
+                },
+                {
+                    "invocation_id": "d18f2b5c-b6e0-435f-8d2b-a8c2446c22a7",
+                    "user_content": {
+                        "role": "user",
+                        "parts": [
+                            {
+                                "text": "Yes, evaluate the overall risk"
+                            }
+                        ]
+                    },
+                    "final_response": {
+                        "role": "model",
+                        "parts": [
+                            {
+                                "text": "I've completed a comprehensive risk evaluation of your AAPL investment plan. The analysis shows the plan is well-aligned with your moderate risk tolerance and medium-term investment horizon."
+                            }
+                        ]
+                    },
+                    "intermediate_data": {
+                        "tool_uses": [
+                            {
+                                "name": "risk_analyst_agent",
+                                "args": {}
+                            }
+                        ],
+                        "tool_responses": [],
+                        "intermediate_responses": []
+                    },
+                    "creation_timestamp": 1766902293.9948149
+                }
+            ],
+            "creation_timestamp": 1766902293.994827
+        }
+    ],
+    "creation_timestamp": 1766902293.994828
+}

@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "rubric_based_final_response_quality_v1": {
+            "threshold": 0.7,
+            "judge_model_options": {
+                "judge_model": "gemini-2.5-flash",
+                "num_samples": 1
+            },
+            "rubrics": [
+                {
+                    "rubric_id": "search_accuracy",
+                    "rubric_content": {
+                        "text_property": "The response contains accurate information based on the external information provided by the search tool."
+                    }
+                },
+                {
+                    "rubric_id": "source_citation",
+                    "rubric_content": {
+                        "text_property": "The response mentions using outside information or cites relevant details from the search results."
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "criteria": {
+        "rubric_based_final_response_quality_v1": {
+            "threshold": 0.7,
+            "judge_model_options": {
+                "judge_model": "gemini-2.5-flash",
+                "num_samples": 3
+            },
+            "rubrics": [
+                {
+                    "rubric_id": "financial_structure",
+                    "rubric_content": {
+                        "text_property": "The response follows the proper workflow structure: data analysis → trading strategies → execution plan → risk assessment."
+                    }
+                },
+                {
+                    "rubric_id": "user_preferences_integration",
+                    "rubric_content": {
+                        "text_property": "The response appropriately incorporates user's risk attitude and investment period into recommendations."
+                    }
+                },
+                {
+                    "rubric_id": "actionable_guidance",
+                    "rubric_content": {
+                        "text_property": "The response provides clear next steps and guides the user through the financial advisory process."
+                    }
+                },
+                {
+                    "rubric_id": "professional_tone",
+                    "rubric_content": {
+                        "text_property": "The response maintains a professional advisory tone without making guaranteed promises about returns."
+                    }
+                }
+            ]
+        },
+        "rubric_based_tool_use_quality_v1": {
+            "threshold": 0.8,
+            "judge_model_options": {
+                "judge_model": "gemini-2.5-flash",
+                "num_samples": 3
+            },
+            "rubrics": [
+                {
+                    "rubric_id": "correct_tool_sequence",
+                    "rubric_content": {
+                        "text_property": "The agent calls sub-agents in the correct order: data_analyst first, then trading_analyst, execution_analyst, and finally risk_analyst."
+                    }
+                },
+                {
+                    "rubric_id": "appropriate_tool_selection",
+                    "rubric_content": {
+                        "text_property": "The agent uses financial sub-agents for stock analysis and google_search for general questions."
+                    }
+                }
+            ]
+        }
+    }
+}

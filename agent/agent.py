@@ -14,7 +14,7 @@ from ag_ui.encoder import EventEncoder
 from ag_ui.core import RunErrorEvent, EventType
 from google.adk.agents import LlmAgent
 from google.adk.tools.agent_tool import AgentTool
-from google.adk.tools import google_search
+from google.adk.tools.google_search_tool import GoogleSearchTool
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -31,32 +31,12 @@ from sub_agents.data_analyst import data_analyst_agent
 from sub_agents.execution_analyst import execution_analyst_agent
 from sub_agents.risk_analyst import risk_analyst_agent
 from sub_agents.trading_analyst import trading_analyst_agent
-
+from tools.yfinance_tools import get_stock_price
 
 
 def create_agent(thread_id: str) -> ADKAgent:
     """Create a new agent instance for a specific thread."""
-    # Create the ADK Agent with the built-in Google Search Tool
-    financial_coordinator = LlmAgent(
-    name="financial_coordinator",
-    model=MODEL,
-    description=(
-        "guide users through a structured process to receive financial "
-        "advice by orchestrating a series of expert subagents. help them "
-        "analyze a market ticker, develop trading strategies, define "
-        "execution plans, and evaluate the overall risk."
-    ),
-    instruction=prompt.FINANCIAL_COORDINATOR_PROMPT,
-    output_key="financial_coordinator_output",
-    tools=[
-        google_search,  # For general questions
-        AgentTool(agent=data_analyst_agent),
-        AgentTool(agent=trading_analyst_agent),
-        AgentTool(agent=execution_analyst_agent),
-        AgentTool(agent=risk_analyst_agent),
-    ],
-    )
-
+    """Returns a configured ADKAgent instance for the given thread."""
     # Create ADK middleware agent instance
     return ADKAgent(
         adk_agent=financial_coordinator,
@@ -65,6 +45,49 @@ def create_agent(thread_id: str) -> ADKAgent:
         session_timeout_seconds=3600,
         use_in_memory_services=True
     )
+
+# Sub-agent tools with descriptions
+# We set descriptions after initialization because AgentTool.__init__ doesn't accept them in this version.
+data_analyst_tool = AgentTool(agent=data_analyst_agent)
+data_analyst_tool.description = "Call this to perform comprehensive market data analysis for a stock ticker."
+
+trading_analyst_tool = AgentTool(agent=trading_analyst_agent)
+trading_analyst_tool.description = "Call this to develop personalized trading strategies based on market data and user preferences."
+
+execution_analyst_tool = AgentTool(agent=execution_analyst_agent)
+execution_analyst_tool.description = "Call this to define a detailed execution plan for a trading strategy."
+
+risk_analyst_tool = AgentTool(agent=risk_analyst_agent)
+risk_analyst_tool.description = "Call this to perform a comprehensive risk evaluation of an entire investment plan."
+
+# Global agent instance for evaluation and direct library access
+# This is explicitly named 'financial_coordinator' but also exported as 'agent' and 'root_agent'
+# to satisfy various ADK evaluation lookups.
+financial_coordinator = LlmAgent(
+    name="financial_coordinator",
+    model=MODEL,
+    description=(
+        "Specialized Financial Advisory Assistant that orchestrates expert subagents "
+        "to provide market analysis, trading strategies, and risk assessments."
+    ),
+    instruction=prompt.FINANCIAL_COORDINATOR_PROMPT,
+    output_key="financial_coordinator_output",
+    tools=[
+        GoogleSearchTool(bypass_multi_tools_limit=True),
+        data_analyst_tool,
+        trading_analyst_tool,
+        execution_analyst_tool,
+        risk_analyst_tool,
+    ],
+)
+
+# Mandatory exports for AgentEvaluator
+agent = financial_coordinator
+root_agent = financial_coordinator
+
+async def get_agent_async():
+    """Returns the configured agent instance for evaluation."""
+    return financial_coordinator, "financial_coordinator"
 
 class SessionManager:
     """Manages agent sessions by thread ID."""
